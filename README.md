@@ -12,4 +12,5 @@ curl -F "image=@file.pdf" -F "dpi=150" http://localhost:5000/image > test.png
 
 dpi - DPI (default 72)
 n - number of pages (default -1 - all pages)
-page - page number (default 0)  
+page - page number (default 0)
+grayscale - convert to grayscale if param has any value (default 0)

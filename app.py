@@ -25,7 +25,9 @@ def image():
         try:
             image = pyvips.Image.pdfload(tmpfile[1], page=int(page), n=int(n), dpi=int(dpi))
             os.remove(tmpfile[1])
-            a = image.write_to_buffer('.png')
+            if request.form.get('grayscale'):
+                image = image.colourspace('b-w')
+            a = image.write_to_buffer('.png')   
             return send_file(io.BytesIO(a), mimetype='image/png')
         except:
             os.remove(tmpfile[1])
