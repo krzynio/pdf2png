@@ -1,7 +1,7 @@
 FROM debian:stretch-slim
 WORKDIR /app
 COPY requirements.txt /app
-# build
+# library versions
 ENV POPPLER_VERSION=0.69.0
 ENV VIPS_VERSION=8.7.0 
 # prerequisities
@@ -10,6 +10,7 @@ RUN apt-get -y install pypy virtualenv build-essential g++ autoconf libfontconfi
 RUN wget https://poppler.freedesktop.org/poppler-$POPPLER_VERSION.tar.xz
 RUN wget https://github.com/libvips/libvips/archive/v$VIPS_VERSION.tar.gz
 RUN tar -xJf poppler-$POPPLER_VERSION.tar.xz
+# build 
 WORKDIR /app/poppler-$POPPLER_VERSION/build
 RUN cmake ..
 RUN make
