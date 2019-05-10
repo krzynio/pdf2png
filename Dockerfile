@@ -39,5 +39,5 @@ ENV workers=1
 ENV timeout=300
 EXPOSE 5000
 COPY . /app
-ENTRYPOINT venv/bin/gunicorn -b0:$port --threads=$threads --workers=$workers --timeout $timeout --reload app:app
+ENTRYPOINT venv/bin/gunicorn -b0:$port --threads=$threads --workers=$workers --timeout $timeout app:app
 
