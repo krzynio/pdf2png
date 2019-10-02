@@ -8,5 +8,5 @@ Jinja2==2.10.1
 MarkupSafe==1.1.1
 pkgconfig==1.5.1
 pycparser==2.19
-pyvips==2.1.5
-Werkzeug==0.15.2
+pyvips==2.1.8
+Werkzeug==0.16.0
