@@ -9,4 +9,4 @@ MarkupSafe==1.1.1
 pkgconfig==1.5.1
 pycparser==2.19
 pyvips==2.1.5
-Werkzeug==0.15.2
+Werkzeug==0.15.3
