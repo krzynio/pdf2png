@@ -2,8 +2,8 @@ FROM debian:stretch-slim
 WORKDIR /app
 COPY requirements.txt /app
 # library versions
-ENV POPPLER_VERSION=0.69.0
-ENV VIPS_VERSION=8.7.0 
+ENV POPPLER_VERSION=0.81.0
+ENV VIPS_VERSION=8.8.3
 # prerequisities
 RUN apt-get -y update
 RUN apt-get -y install pypy virtualenv build-essential g++ autoconf libfontconfig1-dev pkg-config libjpeg-dev gnome-common libglib2.0-dev gtk-doc-tools libyelp-dev yelp-tools gobject-introspection libsecret-1-dev libnautilus-extension-dev wget xz-utils cmake libopenjp2-7-dev

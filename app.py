@@ -27,6 +27,8 @@ def image():
             os.remove(tmpfile[1])
             if request.form.get('grayscale'):
                 image = image.colourspace('b-w')
+            if request.form.get('tresh'):
+                image = image.relational_const('more', 190)
             a = image.write_to_buffer('.png')   
             return send_file(io.BytesIO(a), mimetype='image/png')
         except:
